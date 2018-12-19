@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html>
+  <head>
+    {% block head %}
+    <title>Aula Django</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block body %}
+    <div class="jumbotron">
+      <h1 class="display-4">Essa deve ser a aula de Django!</h1>
+      <p class="lead">Ou deve pelo menos ter algumas informações.</p>
+      <hr class="my-4">
+      <p>O botão abaixo deve te levar de volta pra HomePage, se o da sidebar ainda nao estiver funcionando.</p>
+      <p class="lead">
+        <a class="btn btn-primary btn-lg" href="/home" role="button">HomePage</a>
+      </p>
+    </div>
+
+    <h1>Coisas Pra Lembrar</h1>
+    <hr class="my-4">
+      <div class="container">
+        <h2>Como eu insalo o Django na minha máquina?</h2>
+        <div class="container">
+        <p>Considerando que você ja tem python na sua máquina, apenas digite o seguinte comando no terminal:</p>
+        <div class="alert alert-info" role="alert">
+          $: sudo pip install django
+        </div>
+      </div>
+      <h2>Como criar um projeto?</h2>
+        <div class="container">
+        <p>Primeiro crie um diretório para o Django e entre nesse diretório:</p>
+        <div class="alert alert-info" role="alert">
+          $: mkdir Django
+          <p style="margin: 0px;">$: cd Django</p>
+        </div>
+        <p>Depois inicie seu projeto:</p>
+        <div class="alert alert-info" role="alert">
+          $: django-admin startproject "nome do projeto"
+        </div>
+        <p>Entre no diretório que será criado e abra o projeto no seu editor de texto:</p>
+        <div class="alert alert-info" role="alert">
+          $: cd "nome do projeto"
+          <p style="margin: 0px;">$: atom .</p>
+        </div>
+        <p>Para rodar o servidor, execute o arquivo manage.py com o argumento runserver:</p>
+        <div class="alert alert-info" role="alert">
+          $: python manage.py runserver
+        </div>
+      </div>
+      <h2>O que é <a href="https://getbootstrap.com/">Bootstrap</a>?</h2>
+      <div class="container">
+        <p><a href="https://getbootstrap.com/">Bootstrap</a> é um framework util e gratuito de CSS e JS, que foi utilizado, por exemplo, nessa aplicação.</p>
+      </div>
+      <h2>O que é <a href="http://jinja.pocoo.org/">Jinja</a>?</h2>
+      <div class="container">
+        <p>Mano nem eu sei explicar direito o que é <a href="http://jinja.pocoo.org/">Jinja</a>, mas é um framework que consegue relacionar seus códigos. Essa aplicação por exemplo, tem cédigos de Content, que são os códigos com o conteúdo da HomePage e dessa página da Aula, e outro código Base, que contém a sidebar e o Footer.</p>
+      </div>
+      <h2>Acesse a Página no <a href="http://dontpad.com/aulinhaDjangoAugusto">Dontpad</a></h2>
+      <div class="container">
+        <p>Coloquei umas coisas pra eu lembrar lá, mas ja passei quase tudo pra cá. O que ficou lá nao da pra entender direito.</p>
+      </div>
+    </div>
+    <hr class="my-4">
+    {% endblock %}
+  </body>
+</html>
